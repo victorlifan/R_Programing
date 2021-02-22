@@ -8,10 +8,10 @@ best <- function(state, outcome) {
                         colClasses = "character")
     ## Check that state and outcome are valid
     if (state %in% df$State == FALSE) 
-        {message("Error in best(state, outcome) : invalid state")}
+        {stop("invalid state")}
     else if (outcome %in% c( "heart attack","pneumonia","heart failure")==FALSE)
-    {message("Error in best(state, outcome) : invalid outcome")}
-    ## assign column indeices according to `outcome` argu
+    {stop("invalid outcome")}
+    ## assign column indexes according to `outcome` argu
     else {if (outcome == "heart attack") {colindex <- 11}
         else if (outcome == "heart failure") {colindex <- 17}
         else {colindex <- 23}

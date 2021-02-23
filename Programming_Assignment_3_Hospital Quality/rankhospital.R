@@ -1,3 +1,7 @@
+## The function reads the outcome-of-care-measures.csv file and returns a 
+## character vector with the name of the hospital that has the ranking 
+## specified by the num argument.
+
 rankhospital <- function(state, outcome, num = "best") {
     ## Read outcome data
     df <- read.csv("rprog_data_ProgAssignment3-data/outcome-of-care-measures.csv", 
